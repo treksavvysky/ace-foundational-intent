@@ -61,6 +61,91 @@ Autonomous coding agents working within this repository contribute to the creati
 
 ---
 
+## 🧾 Agent Commit Protocol
+
+Autonomous agents operating in this repository must follow a **structured commit format** to ensure clear lineage, reproducibility, and interpretability across ACE’s multi-agent ecosystem.
+
+Each commit message should follow this pattern:
+
+[AgentName] [Category]: [Short summary]
+
+Body:
+
+What changed
+
+Why it was done
+
+Validation or test details
+
+Any downstream impact
+
+### 🔖 Example Commits
+
+[Codex] feat: add /v1/ingest endpoint with basic telemetry schema
+Implemented POST /v1/ingest using FastAPI and Pydantic model
+Added schema validation for metric payloads
+Verified via curl test on localhost:8000
+
+[Jules] docs: update AGENTS.md with commit protocol guidelines
+Added commit format and example messages
+Clarified agent role expectations for telemetry ingestion
+
+### 🧩 Commit Categories
+
+| Category | Description |
+|-----------|-------------|
+| **feat** | New features or functionality additions |
+| **fix** | Bug fixes or behavior corrections |
+| **docs** | Documentation updates and clarifications |
+| **refactor** | Code restructuring without behavioral change |
+| **test** | New or updated tests |
+| **chore** | Build tasks, dependency updates, or minor cleanups |
+
+Each agent should include its **name or codename** in square brackets (`[Codex]`, `[Jules]`, `[Claude]`, `[Hephaestus]`, etc.) to make authorship explicit.
+
+---
+
+### 🧠 Agent Review Policy
+
+- Agents may open pull requests autonomously, but all PRs must include:
+  - A clear description of changes
+  - Evidence of local validation or test results
+  - Confirmation that `/healthz` still responds successfully
+- Human or supervisory agents (e.g., `treksavvysky`, `Jules-Control-Tower`) review, approve, and merge.
+
+---
+
+### 📡 Traceability and Versioning
+
+- Every merged commit represents an **evolutionary event** in ACE’s cognitive growth.
+- All architectural or behavioral changes must be logged in `CHANGELOG.md` (if present).
+- Each PR should reference any relevant documents in `/docs` (e.g., updates to schemas or new endpoint specs).
+
+🧱 **Append-Only Policy**
+
+`CHANGELOG.md` serves as ACE’s *cognitive timeline*.  
+It must **never be rewritten, rebased, or squashed.**  
+Each entry represents an irreversible event in ACE’s developmental history.  
+Edits are allowed only to correct typos or formatting — not to alter meaning, remove events, or reorder time.  
+
+Agents should think of the changelog as **ACE’s long-term memory**, a chronicle of its evolution from signal to intelligence.
+
+---
+
+### 🧬 Example Evolution Log Entry
+
+2025-10-15 — [Codex] feat: add /v1/ingest endpoint
+ACE achieves its first neural firing. The Telemetry Ingest Service receives and validates its first metric.
+Verified stable at commit SHA a1b2c3d.
+
+---
+
+By following this protocol, autonomous agents ensure that ACE’s growth is not chaotic but **evolutionary** — each change a deliberate mutation recorded in its cognitive lineage.
+
+> “Every commit is a synapse. Every PR is a new pathway.”
+
+---
+
 ## 🧬 Repository Structure
 
 ace-foundational-intent/
@@ -71,7 +156,7 @@ ace-foundational-intent/
 ├── docker/ # Container and deployment configs
 └── AGENTS.md # This file
 
-
+If you make changes to the repo structure and scalfolding, you should update the above section for future agentic tasks.
 ---
 
 ## 🔒 Security and Data Ethics
