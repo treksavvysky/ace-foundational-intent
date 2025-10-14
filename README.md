@@ -5,6 +5,31 @@
 
 ---
 
+## 🧭 Repository Overview
+
+This repository marks **Phase 0** of the *Autonomous Cognitive Entity (ACE)* project —  
+the moment perception awakens before intelligence takes form.  
+
+The repo is organized around three complementary documents that trace ACE’s evolution from signal to system:
+
+1. **`docs/FOUNDATIONAL_INTENT.md`** — the *manifesto* and philosophical charter.  
+   It defines the principle of *signal before intelligence* and introduces the Telemetry Ingest Service as ACE’s first heartbeat.  
+
+2. **`docs/DESIGN.md`** *(formerly `ACE-productivity-designdoc.md`)* — the *architectural design*.  
+   It transforms the idea of perception into structure, describing the multi-layer cognitive architecture that will grow from this initial signal.  
+
+3. **`README.md`** — the *field manual*.  
+   It explains how to run, test, and extend the service, grounding the philosophy in real, running code.  
+
+Together, these documents capture the **three layers of creation**:  
+> *Intent gives birth to Design.  
+> Design gives birth to Implementation.  
+> Implementation gives birth to Perception.*  
+
+When you clone this repository and start the Telemetry Ingest Service,  
+you aren’t just running a microservice — you’re animating the first organ of ACE.
+
+
 ### 🧠 Foundational Intent
 
 This phase exists to **establish signal, not intelligence.**  
