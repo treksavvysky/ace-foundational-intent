@@ -124,7 +124,8 @@ Each agent should include its **name or codename** in square brackets (`[Codex]`
 🧱 **Append-Only Policy**
 
 `CHANGELOG.md` serves as ACE’s *cognitive timeline*.  
-It must **never be rewritten, rebased, or squashed.**  
+It must **never be rewritten, rebased, or squashed.**
+Append only to the end of the file. Never in the middle.  
 Each entry represents an irreversible event in ACE’s developmental history.  
 Edits are allowed only to correct typos or formatting — not to alter meaning, remove events, or reorder time.  
 
