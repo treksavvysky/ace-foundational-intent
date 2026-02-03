@@ -2,18 +2,17 @@
 
 from __future__ import annotations
 
-from datetime import datetime, timezone
-
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from fastapi.testclient import TestClient
+from fastapi.testclient import TestClient  # noqa: E402
 
-from src.scaffold.main import app
+from src.scaffold.main import app  # noqa: E402
 
 client = TestClient(app)
 
