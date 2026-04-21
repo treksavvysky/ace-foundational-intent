@@ -40,6 +40,33 @@ def test_ingest_accepts_valid_payload() -> None:
     assert response.json() == {"received": True}
 
 
+def test_ingest_rejects_missing_fields() -> None:
+    """The ingest endpoint should reject payloads missing required fields."""
+
+    payload = {
+        "source": "unit-test",
+        "metric": "latency_ms",
+        "value": 12.3,
+    }
+
+    response = client.post("/v1/ingest", json=payload)
+    assert response.status_code == 422
+
+
+def test_ingest_rejects_invalid_timestamp() -> None:
+    """The ingest endpoint should reject payloads with invalid timestamp format."""
+
+    payload = {
+        "source": "unit-test",
+        "metric": "latency_ms",
+        "value": 12.3,
+        "timestamp": "invalid-timestamp-format",
+    }
+
+    response = client.post("/v1/ingest", json=payload)
+    assert response.status_code == 422
+
+
 def test_ingest_rejects_unknown_fields() -> None:
     """The ingest endpoint should reject payloads with unexpected fields."""
 
